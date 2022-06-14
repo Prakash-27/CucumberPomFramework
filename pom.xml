@@ -114,12 +114,13 @@
 									<exclude>**/*IT*.java</exclude>
 								</excludes>
 								<includes>
-									UNCOMMENT BELOW LINE
+									<!-- UNCOMMENT BELOW LINE
 									- To execute feature files with a single
-									runner
-									<include>**/MyTestRunner.java</include>
-									UNCOMMENT BELOW LINE - To execute feature files with multiple
-									runners
+									runner -->
+									<include>**/MyTest.java</include>
+									
+									<!-- UNCOMMENT BELOW LINE - To execute feature files with multiple
+									runners -->
 									<include>**/*Runner.java</include>
 								</includes>
 								<!-- UNCOMMENT BELOW 3 LINES - To execute using parallel or combination 
