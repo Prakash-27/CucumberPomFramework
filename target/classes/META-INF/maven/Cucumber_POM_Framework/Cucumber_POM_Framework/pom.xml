@@ -98,6 +98,13 @@
 				<plugin>
 					<artifactId>maven-surefire-plugin</artifactId>
 					<version>${maven.surefire.version}</version>
+					<configuration>
+					    <includes>
+					        <include>**/ParallelRunUsingTestNG.java</include>
+					    </includes>
+					    <parallel>methods</parallel>
+					    <useUnlimitedThreads>true</useUnlimitedThreads> 
+					</configuration>
 				</plugin>
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
