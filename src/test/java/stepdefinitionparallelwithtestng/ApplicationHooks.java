@@ -2,6 +2,7 @@ package stepdefinitionparallelwithtestng;
 
 import java.util.Properties;
 
+import org.junit.Assume;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -20,13 +21,24 @@ public class ApplicationHooks {
 	private ConfigReader configReader;
 	Properties prop;
 
-	@Before(order = 0)
+	//In Cucumber there are two ways of skipping the scenario:
+		//1. using tags in feature file and mention the same tag in Runner file with tags option.
+		//2. Using Before Hooks by passing the skipped tag value.
+	
+	//Another way to Skip the Scenario in Cucumber -> Login.feature
+	@Before(value = "@Skip", order = 0)
+	public void skip_scenario(Scenario scenario) {
+		System.out.println("SKIPPED SCENARIO is : " + scenario.getName());
+		Assume.assumeTrue(false);
+	}
+	
+	@Before(order = 1)
 	public void getProperty() {
 		configReader = new ConfigReader();
 		prop = configReader.init_prop();
 	}
 
-	@Before(order = 1)
+	@Before(order = 2)
 	public void launchBrowser() {
 		String browserName = prop.getProperty("browser");
 		driverFactory = new DriverFactory();
