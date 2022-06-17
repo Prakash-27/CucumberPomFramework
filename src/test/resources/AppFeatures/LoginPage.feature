@@ -10,7 +10,7 @@ Then page title should be "Login - My Store"
 Scenario: Forget Password link 
 Given user is on login page 
 Then forget your password link should be displayed
-
+ 
 @login
 Scenario: Login with correct credentials
 Given user is on login page
