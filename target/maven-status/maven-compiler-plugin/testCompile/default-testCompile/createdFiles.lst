@@ -1,0 +1,11 @@
+stepdefinitionparallelwithtestng\AccountsPageSteps.class
+stepdefinitionparallelwithtestng\FailedRun.class
+stepdefinitionparallelwithtestng\ParallelRunUsingTestNG.class
+stepdefinitionparallelwithtestng\ContactUsSteps.class
+stepdefinitions\LoginPageSteps.class
+stepdefinitions\AccountsPageSteps.class
+testrunners\MyTest.class
+AppHooks\ApplicationHooks.class
+testrunners\MySerenityTest.class
+stepdefinitionparallelwithtestng\ApplicationHooks.class
+stepdefinitionparallelwithtestng\LoginPageSteps.class
